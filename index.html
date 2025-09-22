@@ -141,11 +141,20 @@
     <main>
         <!-- Home Section -->
         <section id="home">
-            <div class="hero-section text-white min-h-screen flex items-center">
-                <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Инженерные изыскания</h1>
-                    <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Профессиональные решения для строительства на всей территории Казахстана. Гарантия точности и надежности.</p>
-                    <a href="#contacts" class="cta-button bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-yellow-700">Получить консультацию</a>
+            <div class="relative min-h-screen grid place-items-center bg-cover bg-center bg-fixed text-white"
+                style="background-image:url('pic/hero-big.png');">
+                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="relative z-10 container mx-auto px-6 text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    Инженерные изыскания
+                </h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                    Профессиональные решения для строительства на всей территории Казахстана. Гарантия точности и надежности.
+                </p>
+                <a href="#contacts"
+                    class="cta-button inline-block bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-yellow-700">
+                    Получить консультацию
+                </a>
                 </div>
             </div>
             
@@ -155,12 +164,12 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center max-w-4xl mx-auto">
                         <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
                             <div class="text-5xl text-yellow-600 mb-4"><i class="fas fa-award"></i></div>
-                            <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="10">0</span>+</h3>
+                            <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="10">4</span>+</h3>
                             <p class="text-gray-600 text-lg">лет опыта в сфере инженерных изысканий</p>
                         </div>
                         <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
                             <div class="text-5xl text-yellow-600 mb-4"><i class="fas fa-check-double"></i></div>
-                            <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="500">0</span>+</h3>
+                            <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="500">200</span>+</h3>
                             <p class="text-gray-600 text-lg">успешно выполненных проектов</p>
                         </div>
                     </div>
@@ -324,20 +333,37 @@
                     <div class="lg:w-1/2 bg-gray-50 p-8 rounded-lg shadow-lg" data-aos="fade-left">
                         <h3 class="text-2xl font-bold mb-6">Форма обратной связи</h3>
                         <form id="contact-form">
+                            <!-- Имя -->
                             <div class="mb-5">
                                 <label for="name" class="block mb-2 font-semibold text-gray-700">Ваше имя</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-300 form-input" placeholder="Иван Петров" required>
+                                <input type="text" id="name" name="name" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-300 form-input" 
+                                    placeholder="Иван Петров" required>
                             </div>
+                            
+                            <!-- Email или телефон -->
                             <div class="mb-5">
-                                <label for="email" class="block mb-2 font-semibold text-gray-700">Email</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-300 form-input" placeholder="example@email.com" required>
+                                <label for="contact" class="block mb-2 font-semibold text-gray-700">Email или телефон</label>
+                                <input type="text" id="contact" name="contact" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-300 form-input" 
+                                    placeholder="example@mail.com или +7 777 123-45-67" required>
+                                <p id="contact-error" class="text-red-600 mt-2 hidden text-sm"></p>
                             </div>
+                            
+                            <!-- Сообщение -->
                             <div class="mb-5">
                                 <label for="message" class="block mb-2 font-semibold text-gray-700">Сообщение</label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-300 form-input" placeholder="Опишите вашу задачу..."></textarea>
+                                <textarea id="message" name="message" rows="4" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-300 form-input" 
+                                        placeholder="Опишите вашу задачу..."></textarea>
                             </div>
-                            <button type="submit" id="submit-button" class="w-full cta-button bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-yellow-700">Отправить</button>
-                            </form>
+                            
+                            <!-- Кнопка -->
+                            <button type="submit" id="submit-button" 
+                                    class="w-full cta-button bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-yellow-700">
+                                Отправить
+                            </button>
+                        </form>
                         <p id="form-status" class="mt-4 text-center"></p>
                     </div>
                 </div>
